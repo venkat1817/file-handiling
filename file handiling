@@ -1,0 +1,184 @@
+'''
+# function which return reverse of a string
+s = ['malayalam','aha']
+def isPalindrome(s):
+    return s == s[::-1]:
+      
+# Driver code
+ans = isPalindrome(s)
+if ans:
+	print("Yes")
+else:
+	print("No")
+'''
+'''
+#file handiling:
+'''
+'''
+open()
+write()
+close()
+'''
+'''
+eg:1
+# open the file write the data. 
+fileobj=open('file handiling.txt','w')
+fileobj.write('welcom to nth')
+fileobj.close()
+eg:2
+fileobj=open('file handiling.txt','w')
+fileobj.write('python is,level,language')
+fileobj.close()
+eg:3
+fileobj=open('file handiling.txt','w')
+fileobj.write('python\n is is\n level language')
+fileobj.close()
+'''
+'''
+#reading data from file #using read(),#using read(n)
+eg:1
+fileobj=open('file handiling.txt','r')
+fileobj.read()   ---------------->it reads all file data as single string.
+fileobj.close()   
+eg:2
+fileobj=open('file handiling.txt','r')
+fileobj.read(n)   ---------------->it reads 'n' number of character from the file.
+fileobj.close()   
+#reading data from file #using readline(),#using readline(n)
+eg:1
+fileobj=open('file handiling.txt','r')
+fileobj.readline()   ---------------->it reads first line from the file as single string.
+fileobj.close()  
+eg:2
+ileobj=open('file handiling.txt','r')
+fileobj.readline(n)   ---------------->it reads 'n' number of charecter from the first line.
+fileobj.close()  
+#reading data from file #using readlines(),#using readlines(n)
+eg:1
+fileobj=open('file handiling.txt','r')
+fileobj.readlines()   ---------------->it reads all lines from the file as list format.each line will be one string element in the list.
+fileobj.close()  
+eg:2
+ileobj=open('file handiling.txt','r')
+fileobj.readlines(n)   ---------------->it reads 'n' number of charecter from the first line.
+fileobj.close()
+'''
+#wap to read 3rd line from the file.
+obje=open('file handiling.txt','r')
+obj2=obje.readlines()[2]
+print(obj2)
+ #wap to read the first word program the file line.         
+obje=open('file handiling.txt','r')
+obj2=obje.readline()
+obje3=obj2.split(',')
+print(obje3,[0])
+#wap to read the last word from last line.         
+obje=open('file handiling.txt','r')
+obj2=obje.readline()[-1]
+obje3=obj2.split(',')
+print(obje3,[-1])
+         # (or)
+print(open('file handiling.txt','r')[-1].split(',')[-1])         
+#wap to read the first word from each line.
+
+obje=open('file handiling.txt','r')
+obj2=obje.readline()
+for i in obj2:
+  obje3=i.split(',')
+print(obje3,[0])
+#wap to read the first charecter from second word in third line.
+a=open('file handiling.txt','r')
+b=a.readline()
+c=b.[2]
+d=c.split(',')
+e=d.[1]
+print(e,[0])
+(or)
+print(open('file handiling.txt','r').readline()[2].split(',')[1][0])
+
+#wap to read the last charecter of second word in second line.
+a=open('file handiling.txt','r')
+b=a.readline()
+c=b.[1]
+d=c.split(',')
+e=d.[1]
+print(e,[-1])
+(or)
+print(open('file handiling.txt','r').readline()[1].spilt(',')[1][-1])
+
+#wap to read the first two charecters from third word in first line          
+a=open('file handiling.txt','r')
+b=a.readline()
+c=b.[0]
+d=c.split(',')
+e=d.[2]
+print(e,[0:2])
+(or)
+print(open('file handiling.txt','r').readline()[0].spilt(',')[2][0:2])
+
+#how to count all vowels in the file?
+a=open('file handiling.txt','r')
+b=a.read()
+print(b)
+v='aeiouAEIOU'
+d={}.from keys(v,0)      
+for i in b:
+if i in d:
+      d[i]=d[i]+1
+    print(d)
+#how to read all words which contain 4 or below 4 charecters.      
+a=open('file handiling.txt','r')
+b=a.read()
+      lst1=[]
+for i in b:
+c=i.split(',')
+for i in c:
+      if len(i)<=4:
+      lst1.append(i)
+      print(lst1)for i in b:
+
+#wap to read all words which starts with any vowel.
+a=open('file handiling.txt','r')
+b=a.read()
+      lst1=[]     
+for i in b:
+c=i.split(',')
+for i in c:
+      if i[0]in'aeioUAEIOU':
+      x=i.replace ('\n','')
+      lst1.append(x)
+      print(lst1)
+
+#wap to reverse all words which contain 'a'character.
+a=open('file handiling.txt','r')
+b=a.read()
+      lst1=[]     
+for i in b:
+c=i.split(',')
+for i in c:
+      if 'a'in i:
+      i.replace('\n','')
+    x=i[-1::-1]
+      lst1.append(x)
+      print(lst1)
+#wap to read all uniqe upper case character from the file.
+a=open('file handiling.txt','r')
+b=a.read()
+      lst1=[]     
+for i in b:
+c=i.split(',')
+for i in c:
+for j in i
+      if j.upper()==True      
+      lst1.append(x)
+      print(list(set(lst)))
+
+      (or)
+      
+a=open('file handiling.txt','r')
+b=a.read()
+      lst1=[]     
+for i in b:
+ if i.upper()==True      
+    lst1.append(x)
+    print(list(set(lst)))
